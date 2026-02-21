@@ -1,0 +1,26 @@
+.main{
+    max-width: 100vw;
+    padding: 4rem 2rem;
+    color: #ffffff;
+    background-image: url("../assets/react-logo-half.png");
+    background-repeat: no-repeat;
+    background-position: right ;
+    
+}
+
+.main > ul {
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.main > ul > li {
+    list-style:disc;
+    align-items: center;
+    font-size: 19px;
+    line-height: 19px;
+}
+
+.main > ul > li::marker{
+    color: #5ad2f0;
+    font-size: 1.5em;
+}

@@ -1,0 +1,35 @@
+.navbar{
+    background-color: #1e1f26;
+    display:flex;
+    flex-direction: row;
+    max-width: 100vw;
+    height: 2.5rem;
+    color: #646cff;
+    padding: 2rem 2rem;
+
+
+
+}
+.navbar > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: #66d0ef;
+    font-weight: 100;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.navbar > div >img{
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
