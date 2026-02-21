@@ -1,0 +1,17 @@
+.header{
+    background-color: #f55a5a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    max-width: 100vh;
+}
+
+.header >div{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    font-family:"inter";
+    font-size: 15px;
+}
