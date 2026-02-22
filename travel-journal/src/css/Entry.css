@@ -1,0 +1,39 @@
+.card{
+    height: 200px;
+    display: flex;
+    gap:15px;
+    font-family: "Inter";
+    padding: 0 10px;
+}
+
+.card > img {
+    height: inherit;
+    width: 9rem;
+    border-radius: 10px;
+}
+
+.card > div {
+    padding: 25px 5px;
+    width: auto;
+}
+.card >div >span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.card > div > span > a{
+    letter-spacing: normal;
+    margin-left: 10px;
+    color: #918e9b;
+}
+
+.card > div > p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+.card > div > h1{
+    margin: 10px 0;
+}
+
+.card >div > h6{
+    margin: 10px 0;
+}
