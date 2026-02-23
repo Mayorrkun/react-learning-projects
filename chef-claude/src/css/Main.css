@@ -1,0 +1,27 @@
+.main-form{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fafaf8;
+}
+
+.main-form > input {
+    width: 50%;
+    height: 30px;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.main-form > button {
+    color: #fafaf8;
+    background-color: #141413;
+    height: 35px;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
