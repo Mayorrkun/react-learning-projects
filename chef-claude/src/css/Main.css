@@ -25,3 +25,55 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+/*ready for a recipe*/
+
+.recipe-ready {
+    background-color: #ecede8;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    justify-content: space-between;
+}
+
+.recipe-ready > button {
+    background-color: #d17557;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: none;
+    height: 45px;
+    cursor: pointer;
+}
+
+.recipe-ready > div >span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.recipe-ready > div >p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/*Ingredients on hand*/
+
+.ingredients-list {
+    margin: 20px 0;
+    padding:0 50px 50px 50px;
+}
+
+.ingredients-list > span {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.ingredients-list > ul{
+    color: #757575;
+    padding: 0 15px;
+}
+.ingredients-list > ul li{
+    margin: 20px 0;
+}
