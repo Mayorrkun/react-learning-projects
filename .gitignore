@@ -17,11 +17,16 @@
 **/yarn-error.log*
 
 # IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+
 
 # OS files
 .DS_Store
-Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
