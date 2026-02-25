@@ -1,11 +1,15 @@
+.Main {
+    background-color: #fafaf8;
+}
+
 .main-form{
-    width: 100vw;
+    max-width: 100vw;
     height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #fafaf8;
+
 }
 
 .main-form > input {
