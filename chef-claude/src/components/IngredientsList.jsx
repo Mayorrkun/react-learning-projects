@@ -1,10 +1,8 @@
 
-export default function IngredientsList({ingredients, setRecipeShown}) {
+export default function IngredientsList({ingredients, showRecipe}) {
 
 
-    function showRecipe(){
-        setRecipeShown(newRecipeShow => !newRecipeShow);
-    }
+
 
     function recipeReady(){
         return <div className="recipe-ready">
