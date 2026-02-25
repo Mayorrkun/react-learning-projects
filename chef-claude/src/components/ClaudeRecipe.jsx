@@ -1,10 +1,11 @@
-
+import Markdown from "react-markdown";
 
 export default function ClaudeRecipe({recipe}){
 
+
     return <section>
         <h2>Chef Claude Recommends:</h2>
-        {recipe}
+        <Markdown>{recipe}</Markdown>
 
         {/*<article className="suggested-recipe-container" aria-live="polite">*/}
         {/*    <p>Based on the ingredients you have available, I would recommend making a simple a delicious <strong>Beef Bolognese Pasta</strong>. Here is the recipe:</p>*/}

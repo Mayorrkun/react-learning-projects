@@ -9,7 +9,7 @@ function Main(){
 
 
     //"Chicken", "Oregano", "Tomatoes"
-const [ingredients, setIngredients] = useState(["Chicken breasts","Most of the main spices","Olive oil", "Heavy Cream", "Chicken broth", "Parmesan cheese", "Spinach"]);
+const [ingredients, setIngredients] = useState([]);
 const [recipe, setRecipe] = useState("");
 
 //
