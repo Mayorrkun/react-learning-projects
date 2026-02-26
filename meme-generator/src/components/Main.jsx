@@ -2,29 +2,67 @@ import {useState, useEffect} from 'react'
 import '../css/Main.css';
 export default function Main() {
 
-    const [topText, setTopText] = useState('');
-    const [bottomText, setBottomText ] = useState('');
+    const [meme, newMeme] = useState({
+        "img":null, "topText":null,"bottomText":null
 
-    function handleTop() {
-        setTopText(newtopText => (document.getElementById("topText").value ));
+    });
+//http://i.imgflip.com/1bij.jpg
+
+    const [num,setNum] = useState(random());
+
+    useEffect(() => {
+
+
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data =>
+            {
+                const newImg = data.data.memes[num].url;
+
+                newMeme(prevMeme => ({
+                    ...prevMeme,img:newImg
+                }));
+
+                document.getElementById("meme").scrollIntoView();
+            });
+    }, [num]);
+
+    function random(){
+
+      return Math.floor(Math.random() * 101)
     }
 
-    function handleBottom() {
-        setBottomText(newbottomText => (document.getElementById("bottomText").value));
+
+    function handleSubmit(formData){
+        setNum(prevNum =>(random()));
+        console.log(num)
     }
+
+    // function top(){
+    //     const text = document.getElementById("topText").value;
+    //     newMeme(prevMeme => ({...prevMeme , topText: text }));
+    // }
+
+    function handleChange(event){
+        const {value, name} = event.currentTarget;
+        newMeme(prevMeme => ({...prevMeme , [name]: value }));
+        console.log(value)
+    }
+
+
 
     const body = <section className="Main">
 
-        <form className="meme-form">
+        <form className="meme-form" action={handleSubmit}>
             <div>
                 <p>
-                    <label htmlFor="">Top text</label>
-                    <input onInput={handleTop} id="topText" type="text" name="topText" placeholder="Top text"/>
+                    <label htmlFor="topText">Top text</label>
+                    <input id="topText" type="text" onChange={handleChange} name="topText" placeholder="Top text"/>
                 </p>
 
                 <p>
-                    <label htmlFor="">Bottom text</label>
-                    <input onInput={handleBottom} id="bottomText" name="bottomText" type="text" placeholder="Bottom text"/>
+                    <label htmlFor="bottomText">Bottom text</label>
+                    <input id="bottomText" onChange={handleChange} name="bottomText" type="text" placeholder="Bottom text"/>
                 </p>
 
             </div>
@@ -33,10 +71,10 @@ export default function Main() {
 
         </form>
 
-        <div className="meme">
-            <img src="http://i.imgflip.com/1bij.jpg" />
-            <span className="top">{topText}</span>
-            <span className="bottom">{bottomText}</span>
+        <div id="meme" className="meme">
+            <img src={meme.img} />
+            <span className="top">{meme.topText}</span>
+            <span className="bottom">{meme.bottomText}</span>
 
         </div>
 
