@@ -2,10 +2,12 @@ import {useState, useEffect} from 'react'
 import '../css/Main.css';
 export default function Main() {
 
-    const [meme, newMeme] = useState({
+    const [meme, setMeme] = useState({
         "img":null, "topText":null,"bottomText":null
 
     });
+    const [allMemes, setAllMemes] = useState([]);
+
 //http://i.imgflip.com/1bij.jpg
 
     const [num,setNum] = useState(random());
@@ -17,13 +19,16 @@ export default function Main() {
             .then(res => res.json())
             .then(data =>
             {
-                const newImg = data.data.memes[num].url;
+                const memes = data.data.memes;
 
-                newMeme(prevMeme => ({
+                setAllMemes( memes);
+
+                const newImg = memes[num].url;
+                console.log(newImg);
+
+                setMeme(prevMeme => ({
                     ...prevMeme,img:newImg
                 }));
-
-                document.getElementById("meme").scrollIntoView();
             });
     }, [num]);
 
@@ -45,7 +50,7 @@ export default function Main() {
 
     function handleChange(event){
         const {value, name} = event.currentTarget;
-        newMeme(prevMeme => ({...prevMeme , [name]: value }));
+        setMeme(prevMeme => ({...prevMeme , [name]: value }));
         console.log(value)
     }
 
