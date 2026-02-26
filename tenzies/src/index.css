@@ -1,0 +1,18 @@
+body{
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+  font-family: 'Inter';
+}
+
+.tenzies-section{
+  background-color: #0B2434;
+  max-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+
+}

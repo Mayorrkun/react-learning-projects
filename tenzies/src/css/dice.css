@@ -1,0 +1,28 @@
+.dice-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    justify-items: center;
+}
+
+.dice{
+    background-color: #FFFFFF;
+    box-shadow:0 2px 2px rgba(0,0,0,0.15);
+    height: 50px;
+    width: 50px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dice-rolled {
+    background-color: #4AD97C;
+    box-shadow:0 2px 2px rgba(0,0,0,0.15);
+    height: 50px;
+    width: 50px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
