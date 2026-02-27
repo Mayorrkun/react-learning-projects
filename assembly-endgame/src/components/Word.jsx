@@ -1,10 +1,14 @@
-import {getRandomWord} from "../js/logic.js";
-import {useState} from "react";
+;
+import "../css/words.css"
+export default function Word({randomWord, guessedLetter}) {
+    const letters = randomWord.split("").map((letter, index)=>(
+        <li key={index}>
+            {guessedLetter.includes(letter) ? letter.toUpperCase() : ""}
+        </li>
+    ))
 
-export default function Word() {
-    const [currentWord, setCurrentWord] = useState(getRandomWord());
-
-    return <ul>
-        {currentWord}
+    return <ul className="current-word">
+        {letters}
     </ul>
+
 }

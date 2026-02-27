@@ -1,6 +1,6 @@
 import "../css/languages.css";
-import {languages} from "../js/data.js";
-export default function Languages() {
+
+export default function Languages({languages}) {
 
     return <ul className="language-list">
         {languages.map((language, index) => (

@@ -1,0 +1,17 @@
+.keyboard{
+  display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    max-width: 350px;
+    margin: 0 auto 36px auto ;
+}
+
+.keyboard > button{
+    height: 40px;
+    width: 40px;
+    background-color: #fcba29;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    cursor: pointer;
+}

@@ -10,6 +10,8 @@ export const languages =[
     {title:"Assembly",backgroundColor:"#2d519f",color:"#f9f4da"},
 ]
 
+export const alphabet ="abcdefghijklmnopqrstuvwxyz"
+
 export const words = [
     "about",
     "account",

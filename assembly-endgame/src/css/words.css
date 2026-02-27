@@ -1,0 +1,21 @@
+.current-word {
+    list-style: none;
+    display: flex;
+    gap:2px;
+    justify-content: center;
+    padding: 0;
+
+}
+
+.current-word li {
+    height: 40px;
+    width: 40px;
+    background-color: #323232;
+    border-bottom: 1px solid #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+
+}

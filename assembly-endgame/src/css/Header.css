@@ -16,6 +16,35 @@
 
 .status{
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-style: italic;
+    border-radius: 5px;
+}
+.status .farewell{
+    height: 60px;
+    background-color: #7a53a7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-style: italic;
+    border-radius: 5px;
+}
+.status .won{
+    height: 60px;
+    background-color: #7a53a7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-style: italic;
+    border-radius: 5px;
+}
+.status .lost {
+    height: 60px;
     background-color: #7a53a7;
     display: flex;
     align-items: center;
