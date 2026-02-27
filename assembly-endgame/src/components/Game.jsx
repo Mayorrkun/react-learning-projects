@@ -50,9 +50,9 @@ export default function Game(){
             isWin ? <ReactConfetti width={width} height={height}/> :null
         }
         <Header statusMessage = {statusMessage} guessedLetters={guessedLetters} isLose={isLose} isWin={isWin}/>
-        <Languages languages={languages}/>
+        <Languages languages={languages} wrongGuesses={wrongGuesses} />
         <Word randomWord={randomWord} guessedLetter={guessedLetters} />
-        <Letters clicked={clicked} guessedLetters={guessedLetters} />
+        <Letters clicked={clicked} guessedLetters={guessedLetters} randomWord={randomWord} />
         {gameOver ? <button className="new-game" onClick={newGame}>New Game</button> : null }
 
 
