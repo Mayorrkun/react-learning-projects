@@ -8,16 +8,11 @@ import {useState} from "react";
 
 export default function Game(){
     //
-    const [randomWord,setRandomWord]= useState(getRandomWord())
+    const [randomWord,setRandomWord]= useState("cosmos")
     const [guessedLetters, setGuessedLetters] = useState([])
     const wrongGuesses = guessedLetters.filter(
         letter => !randomWord.includes(letter)
     )
-
-  //Game status
-  const isWin = randomWord.split("").every(letter => guessedLetters.includes(letter))
-  const isLose = wrongGuesses.length >= 8;
-    const gameOver = isLose || isWin;
 
   //new Game
 
@@ -33,14 +28,21 @@ export default function Game(){
 
 // eliminated
     const eliminatedLanguage = languages[wrongGuesses.length - 1]?.title;
-    const statusMessage = getFarewellText(eliminatedLanguage)
+    let statusMessage = getFarewellText(eliminatedLanguage)
+
+
+    //Game status
+    const isWin = randomWord.split("").every(letter => guessedLetters.includes(letter))
+    const isLose = wrongGuesses.length >= 8;
+    const gameOver = isLose || isWin;
+
 
     return  <section className="game-section">
-        <Header statusMessage = {statusMessage} isLose={isLose} isWin={isWin} gameOver={gameOver}/>
+        <Header statusMessage = {statusMessage} isLose={isLose} isWin={isWin}/>
         <Languages languages={languages}/>
         <Word randomWord={randomWord} guessedLetter={guessedLetters} />
         <Letters clicked={clicked} guessedLetters={guessedLetters} />
-        {gameOver ?  <button className="new-game" onClick={newGame}></button> : null }
+        {gameOver ? <button className="new-game" onClick={newGame}>New Game</button> : null }
 
 
     </section>

@@ -7,10 +7,10 @@ export default function Header({statusMessage, isWin, isLose}) {
             <p>Guess the word in under 8 attempts to keep the programming world safe from assembly</p>
         </div>
         {
-            !isWin || !isLose ?
-                statusMessage ? <div className="status .farewell">{ statusMessage} </div> :  <div className="status"> </div>
-                : isWin ?<div className="status"> <h1> You win!</h1> <span>Well done</span></div>
-                    : isLose ? <div className="status"> <h1>Game over!</h1> <span>You lose! Better start learning assembly</span></div> : null
+                statusMessage ? (<div className="status-farewell">{ statusMessage} </div>)
+                : isWin ? (<div className="status-won"> <span> You win!</span> <p>Well done</p></div>)
+                        : isLose ? (<div className="status-lost"> <span>Game over!</span> <p>You lose! Better start learning assembly</p></div>)
+                        : null
 
         }
     </div>

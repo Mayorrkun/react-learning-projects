@@ -23,7 +23,7 @@
     font-style: italic;
     border-radius: 5px;
 }
-.status .farewell{
+.status-farewell{
     height: 60px;
     background-color: #7a53a7;
     display: flex;
@@ -33,23 +33,28 @@
     font-style: italic;
     border-radius: 5px;
 }
-.status .won{
+.status-won{
     height: 60px;
-    background-color: #7a53a7;
-    display: flex;
+    background-color: #10a95b;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-style: italic;
+    border-radius: 5px;
+
+}
+.status-won > span {
+    font-weight: bold;
+}
+.status-lost {
+    height: 60px;
+    background-color: #ba2a2a;
     align-items: center;
     justify-content: center;
     align-content: center;
     font-style: italic;
     border-radius: 5px;
 }
-.status .lost {
-    height: 60px;
-    background-color: #7a53a7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    font-style: italic;
-    border-radius: 5px;
+.status-lost > span {
+    font-weight: 500;
 }
